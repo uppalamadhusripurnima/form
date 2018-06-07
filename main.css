@@ -1,10 +1,28 @@
 h3{
     text-align: center;
 }
-
-#container{
-    text-align: center;
+form {
+    overflow: hidden;
 }
+ 
+label {
+    margin-left: 80px;
+    float: left;
+    width: 150px;
+    padding-right: 20px;
+}
+ 
+input {
+    float: left;
+    width: calc(80% - 300px);
+}
+button {
+    width: calc(50% - 500px);
+}
+
+/* #container{
+    text-align: center;
+} */
 input:required:invalid{
     border:1px solid red;
 }
@@ -13,4 +31,7 @@ input:required:invalid{
 }
 .span-for-errors{
     display: none;
+}
+#details{
+    text-align: center;
 }

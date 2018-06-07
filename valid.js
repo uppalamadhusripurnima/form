@@ -79,14 +79,19 @@ function validateEmployeeId()
 }
 function validateBloodGroup()
 {   
-    const value = document.validation.blood;
-    for (var i=0; i<value.length; i++) {
-        if (value[i].checked)
-           return;
-     }
-    valid = 1;
-    showError("errorEmployeeBloodGroup", "");
-   
+    // const value = document.validation.blood;
+    // for (var i=0; i<value.length; i++) {
+    //     if (value[i].checked)
+    //        return;
+    //  }
+    // valid = 1;
+    // showError("errorEmployeeBloodGroup", "");
+    if(checkNull("blood"))
+    {
+        valid = 1;
+        showError("errorEmployeeBloodGroup", "blood");
+       
+    }  
 }
  function validateReasonsforIssues()
 {
@@ -165,16 +170,15 @@ function checkLength(id, length)
     }
     return false;
 }
-function checkEmail(id)
-   {
-    const valid="/^([A-Za-z0-9_\-\.])+\@virtusa.com$/";
-    const value=$(`#${id}`).val();
-    if(value.match(pattern))
-    {
+function checkEmail(id)  {
+    
+   const valid=$(`#${id}`).val();
+    const valid="/^([A-Z]|[a-z])+\@virtusa.com$/";
+    if(value.match(pattern))     {
         return true;
-    }
-    return false;
    }
+    return false;
+    }
 
 function showError(spanId, inputId)
 {
