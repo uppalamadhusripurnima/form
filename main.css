@@ -1,0 +1,16 @@
+h3{
+    text-align: center;
+}
+
+#container{
+    text-align: center;
+}
+input:required:invalid{
+    border:1px solid red;
+}
+.group{
+    display:block;
+}
+.span-for-errors{
+    display: none;
+}

@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>Document</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <h3>Employee Id Form</h3>
+        <form id="container" novalidate>
+            <div class="group">
+             <label for="firstname">Firstname</label>
+            <input type="text" id="firstname" required>
+            <span  id="errorfirstname">Please enter your  preferred name</span>
+            </div></br>
+            <div class="group">
+            <label for="fullname">Fullname</label>
+            <input type="text" id="fullname" required>
+            <span id="errorfullname">Please enter your fullname</span>
+            </div></br>
+            <div>
+                <label for="designation">Designation</label>
+                <input type="text" id="designation" required>
+                <span id="errorfordesignation">Please enter your designation</span>
+            </div></br>
+            <div>
+                <label for="employee-Id">Employee-Id</label>
+                <input type="text" id="employee-Id" required>
+                <span id="errorforemployeeId">Please enter your employee-Id</span>
+            </div></br>
+            <div>
+                <label for="blood">Employee BloodGroup</label>
+                <input type="radio"  name="blood" value="A+">A+
+                <input type="radio"  name="blood" value="B+" >B+
+                <input type="radio"  name="blood" value="O+" >O+
+                <input type="radio"  name="blood" value="AB+" >AB+
+                <input type="radio"  name="blood" value="A-">A-
+                <input type="radio"  name="blood" value="B+" >B-
+                <input type="radio"  name="blood" value="O+" >O-
+                <input type="radio"  name="blood" value="AB-" >AB-
+                <span class="span-for-errors" id="errorEmployeeBloodGroup">select your blood group</span><br/><br/> 
+            </div>
+            <div>
+                <label for="issues">Reasons for Issues</label>
+                <select id="issues">
+                    <option value="" selected disabled hidden></option>
+                    <option value="New Employee" checked>New Employee</option>
+                    <option value="Lost">Lost</option>
+                    <option value="Defaced">Defaced</option>
+                    <option value="Conversion">Conversion</option>
+                    <option value="Designation Change">Designation Change</option>
+                  </select> 
+                  <span class="span-for-errors" id="errorMessageForReasonsforIssues">select your Reason for Issues</span><br/>
+            </div><br>
+            <div>
+                <label for="date">Date of joining</label>
+                <input id="date" type="date" required>
+                <span class="span-for-errors" id="errorMessagedate">Date of joining</span><br/>
+
+        </div><br>
+           
+            <div>
+                    <label for="email">Email ID(Virtusa)</label>
+                    <input type="text" id="email" required>
+                    <span class="span-for-errors" id="errorMessageEmailID">select your Reason for Issues</span><br/>
+
+            </div><br>
+            <div>
+                    <label for="mobile">Employee Mobile Number</label>
+                    <input type="text" id="mobile" required>
+                  <span class="span-for-errors" id="errorMessageForEmployeeMobileNumber">select your blood group</span><br/>
+                    
+            </div><br>
+            <div>
+                    <label for="emergency">Emergency Contact Number</label>
+                    <input type="text" id="emergency" required>
+                  <span class="span-for-errors" id="errorMessageForEmployeeEmergencyContactNumber">select your blood group</span><br/>
+                    
+            </div></br>
+        <div>
+            <button type="button" onclick="addDetails()">Add Details</button>
+        </div>
+    </form>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="valid.js"></script>
+</body>
+</html>
