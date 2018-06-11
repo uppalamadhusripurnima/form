@@ -19,7 +19,8 @@ function validateDetails()
     validateFirstname();
     validateFullname();
     validateDesignation();
-    validateEmployeeId();    
+    validateEmployeeId(); 
+    validateDateofjoining();   
     validateReasonsforIssues();    
     validateEmployeeMobileNumber();
     validateEmployeeEmergencyNumber();
@@ -77,6 +78,14 @@ function validateEmployeeId()
     
       }
 
+}
+function validateDateofjoining()
+{
+    if(checkNull("date"))
+    {
+        valid=1;
+        showError("errorMessagedate","date");
+    }
 }
 function validateBloodGroup()
 {   
