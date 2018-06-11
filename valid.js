@@ -37,6 +37,7 @@ function validateFirstname()
    {
         valid = 1;
         showError("errorfirstname", "firstname");
+        
    }
 }
 function validateFullname()
@@ -164,6 +165,7 @@ function checkNumbersOnly(id)
 function checkLength(id, length)
 {
     const value=$(`#${id}`).val();
+
     if(value.length != length)
     {
         return true;
@@ -173,8 +175,9 @@ function checkLength(id, length)
 function checkEmail(id)  {
     
    const valid=$(`#${id}`).val();
-    const valid="/^([A-Z]|[a-z])+\@virtusa.com$/";
-    if(value.match(pattern))     {
+    const value=/^[a-z|A-Z][a-z|A-Z|0-9]+@virtusa.com/;
+    const r=valid.match(value);
+    if(r==null||valid==""){    
         return true;
    }
     return false;

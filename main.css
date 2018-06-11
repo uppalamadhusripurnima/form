@@ -5,7 +5,7 @@ form {
     overflow: hidden;
 }
  
-label {
+/* label {
     margin-left: 80px;
     float: left;
     width: 150px;
@@ -22,9 +22,13 @@ button {
 
 /* #container{
     text-align: center;
-} */
-input:required:invalid{
+} */ 
+.form-control:required:invalid{
     border:1px solid red;
+}
+#blood issues:required:invalid{
+    border:1px solid red;
+    
 }
 .group{
     display:block;
